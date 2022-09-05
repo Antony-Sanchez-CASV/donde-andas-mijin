@@ -1,0 +1,38 @@
+<div class="container" style="text-align: center;">
+  <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <div class="card">
+      <div class="card-header">
+        Inicio de session
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="mb-3" style="text-align:start">
+        <label class="form-label"  >Email</label>
+        <input type="text" class="form-control" formControlName="email">
+      </div>
+      <div class="mb-3" style="text-align:start">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="password">
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+          <input type="submit" value="Enviar" class="btn btn-primary">
+          </div>
+          <div class="col-2">
+          <a href=""><span>Registrase</span></a>
+          </div>
+          <div class="col-2">
+          <a href=""><span>Olvido su contraseña?</span></a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+
+</div>

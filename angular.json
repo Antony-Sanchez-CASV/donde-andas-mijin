@@ -94,8 +94,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "donde-anda-mija:build:production",
+            "firebaseProject": "donde-estas-mija",
+            "firebaseHostingSite": "donde-estas-mija"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3b6d0daf-fe1d-4fe6-8cb3-76a681be812b"
   }
 }

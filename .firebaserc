@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "donde-estas-mija": {
+      "hosting": {
+        "donde-anda-mija": [
+          "donde-estas-mija"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "donde-estas-mija"
+  }
+}
