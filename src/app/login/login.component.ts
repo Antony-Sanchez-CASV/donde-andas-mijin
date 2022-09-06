@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import {FormControl, FormGroup} from '@angular/forms';
+import { Router } from '@angular/router';
+import { Auth } from '@angular/fire/auth';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,6 +12,8 @@ export class LoginComponent implements OnInit {
   formLogin: FormGroup;
   constructor(
     private userService:UserService,
+    private router:Router,
+    private auth:Auth,
   ) {
     this.formLogin =new FormGroup({
       email:new FormControl(),
@@ -23,6 +27,10 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.formLogin.value)
       .then(response=>{
         console.log(response);
+        if(this.auth){
+          this.router.navigate(['/dashboard']);
+        }
+
       })
       .catch(error=>console.log(error));
   }

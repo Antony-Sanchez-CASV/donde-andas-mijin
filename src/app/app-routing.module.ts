@@ -16,8 +16,7 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'login',component:LoginComponent},
   {path:'logout',component:LogoutComponent},
-  {path:'dashboard',component:DashboardComponent,
-    ...canActivate(()=>redirectUnauthorizedTo(['/login']))},
+  {path:'dashboard',component:DashboardComponent,...canActivate(()=>redirectUnauthorizedTo(['/login']))},
 ];
 
 @NgModule({
