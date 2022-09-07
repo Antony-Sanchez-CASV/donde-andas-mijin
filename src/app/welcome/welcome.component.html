@@ -4,10 +4,10 @@
       <h2>Bici Map</h2>
     </div>
     <div class="col-2">
-      <a class=" nav-link active col-2"  href="#">Login</a>
+      <a class=" nav-link active col-2 " (click)="goToLogin()" active>Login</a>
     </div>
     <div class="col-2">
-      <a class=" nav-link active col-2" href="#">Registro</a>
+      <a class=" nav-link active col-2" (click)="goToRegister()">Registro</a>
     </div>
 
   </nav>
@@ -17,11 +17,11 @@
       <h1 class="cover-heading">Bienvenidos</h1>
       <p class="lead">Aplicacion para que no se vuelvan a perder tus panas.</p>
       <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary">Registro</a>
+        <a  (click)="goToRegister()"   class="btn btn-lg btn-secondary">Registro</a>
 
       </p>
       <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary">Login</a>
+        <a (click)="goToLogin()"  class="btn btn-lg btn-secondary">Login</a>
       </p>
     </main>
     </div>

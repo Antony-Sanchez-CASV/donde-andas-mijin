@@ -10,12 +10,14 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 
 import { canActivate,redirectUnauthorizedTo,redirectLoggedInTo } from '@angular/fire/auth-guard';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { MapComponent } from './components/map/map.component';
 
 const routes: Routes = [
   {path:'',component:WelcomeComponent},
   {path:'register', component:RegisterComponent},
   {path:'login',component:LoginComponent},
   {path:'logout',component:LogoutComponent},
+  {path:'map',component:MapComponent},
   {path:'dashboard',component:DashboardComponent,
     ...canActivate(()=>redirectUnauthorizedTo(['/login']))},
 ];

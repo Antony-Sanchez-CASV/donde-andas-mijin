@@ -14,6 +14,11 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { NavComponent } from './nav/nav.component';
+import { MapComponent } from './components/map/map.component';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import { Map } from 'mapbox-gl';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,8 @@ import { NavComponent } from './nav/nav.component';
     LogoutComponent,
     WelcomeComponent,
     DashboardComponent,
-    NavComponent
+    NavComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +37,12 @@ import { NavComponent } from './nav/nav.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    {provide:Map, useValue:{} }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

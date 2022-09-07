@@ -12,6 +12,7 @@ export const environment = {
     authDomain: 'donde-estas-mija.firebaseapp.com',
     messagingSenderId: '710296133774',
   },
+  mapBoxToken: 'pk.eyJ1IjoiYW50b3giLCJhIjoiY2w3cmFqMWw1MGRrZDNxazJncnQ4cjl5ayJ9.hWRCHZyIYwzbjXXqNBULRQ',
   production: false
 };
 

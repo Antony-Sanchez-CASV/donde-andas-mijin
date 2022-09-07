@@ -34,4 +34,10 @@ export class LoginComponent implements OnInit {
       })
       .catch(error=>console.log(error));
   }
+  goToWelcome(){
+    this.router.navigate(['/']);
+  }
+  goToRegister(){
+    this.router.navigate(['/register']);
+  }
 }
